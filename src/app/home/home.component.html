@@ -1,0 +1,216 @@
+<div style="position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);">
+	<button style="width: 300px; height: 200px; border: 1px solid; font-family: Arial, Helvetica, sans-serif; background-image: url(assets/img/login.jpg);"  *ngIf="!user" (click)="login()"></button>
+</div>
+
+
+
+<html *ngIf="user">
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/css/modal-video.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	</head>
+	<style> 
+		
+
+		.btn-one {
+	color: #FFF;
+	transition: all 0.3s;
+	position: relative;
+}
+.btn-one span {
+	transition: all 0.3s;
+}
+.btn-one::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(14, 78, 101, 0.5);
+	border-bottom-color: rgba(69, 42, 138, 0.5);
+	transform: scale(0.1, 1);
+}
+.btn-one:hover span {
+	letter-spacing: 2px;
+}
+.btn-one:hover::before {
+	opacity: 1;	
+	transform: scale(1, 1);	
+}
+.btn-one::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	transition: all 0.3s;
+	background-color: rgba(255,255,255,0.1);
+}
+.btn-one:hover::after {
+	opacity: 0;	
+	transform: scale(0.1, 1);
+}
+		</style>
+		<!-- customizable snowflake styling -->
+	<body>
+			
+			<!-- Logo-->
+		<div class="tutu">			
+			<a href="#" class="logo">
+				<img  src="assets/images/logo.png" alt="logo">
+				
+			</a>
+		</div>
+		<!--Ending Logo-->	
+
+		<!-- Main Poster-->
+		<div  class="main-headingg">			
+			<div class="main-header-button">
+				<h1 class="banner-text">WELCOME</h1>
+				<h2 class="banner-text-two">{{ user?.email}}</h2>
+			</div>
+		</div> 
+		<!-- Ending Main Poster-->	
+
+		<!-- Logout-->	
+		<div>
+			<button class="btn-one"  *ngIf="user" (click)="logout()"></button>
+		</div>
+		<!-- Ending Logout-->
+
+		<!--Clock-->
+		<div class="clock">
+			<iframe src="https://free.timeanddate.com/clock/i7ucv7vw/n2459/fn4/fs20/fc651212/tct/pct/ftb/th2" frameborder="0" width="107" height="26" allowtransparency="true"></iframe>
+		</div>
+		<!--Ending Clock-->
+		
+		<!-- Title-->	
+		<div>
+			<h1 class="movie-list-title">NEW RELEASES</h1>
+		</div>
+		<!--Ending Title-->
+		
+		
+		<!-- Main -->
+			<div id="main" >
+				<div class="inner">
+					<div class="columns">
+						
+
+						<!-- Column 1 (horizontal, vertical, horizontal, vertical) -->
+							<div class="image fit">
+								<a><img src="assets/films/1/1.jpg" alt="" /></a>
+								<div class="bottom-left">Wish Dragon (2021)</div>
+								<a href="assets/films/1/Wish Dragon (2021) [720p] [WEBRip] [YTS.MX].torrent" download=""><button class="btn" style="width:40%;"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/uWIRyU5fuzU?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<div class="image fit">
+								<a><img src="assets/films/2/2.jpg" alt="" /></a>
+								<div class="bottom-left">Cousins (2021)</div>
+								<a href="assets/films/2/Cousins (2021) [720p] [WEBRip] [YTS.MX].torrent" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/Z_f1GjcI8-Q?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<div class="image fit">
+								<a><img src="assets/films/3/3.jpg" alt="" /></a>
+								<div class="bottom-left">Maya the Bee 3 (2021)</div>
+								<a href="assets/films/3/Maya the Bee 3 [TutuAllFilms].rar" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/fNQawiJ6FR8?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<div class="image fit">
+								<a><img src="assets/films/4/4.jpg" alt="" /></a>
+								<div class="bottom-left">Those Who Wish Me Dead (2021)</div>
+								<a href="assets/films/4/Those Who Wish Me Dead (2021) [720p] [WEBRip] [YTS.MX].torrent" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/kciXOTguPCs?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<!--Ending Column 1 (horizontal, vertical, horizontal, vertical) -->
+							
+							<!-- Column 2 (horizontal, vertical, horizontal, vertical) -->
+							<div class="image fit">
+								<a><img src="assets/films/5/5.jpg" alt="" /></a>
+								<div class="bottom-left">Infinite (2021)</div>
+								<a href="assets/films/5/Infinite (2021) [720p] [WEBRip] [YTS.MX].torrent" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/_WWEOCQGxSw?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<div class="image fit">
+								<a><img src="assets/films/6/6.jpg" alt="" /></a>
+								<div class="bottom-left">Wrath of Man (2021)</div>
+								<a href="assets/films/6/Wrath of Man (2021) [720p] [WEBRip] [YTS.MX].torrent" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/EFYEni2gsK0?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<div class="image fit">
+								<a><img src="assets/films/7/7.jpg" alt="" /></a>
+								<div class="bottom-left">Us Again (2021) - Short Movie</div>
+								<a href="assets/films/7/Us Again (2021) [720p] [WEBRip] [YTS.MX].torrent" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/g-y-I3BjZkY?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<div class="image fit">
+								<a><img src="assets/films/8/8.jpg" alt="" /></a>
+								<div class="bottom-left">Flora & Ulysses (2021)</div>
+								<a href="assets/films/8/Flora & Ulysses (2021) [TutuAllFilms].rar" download=""><button class="btn" style="width:40%"><i class="fa fa-download"></i> Download</button></a>
+								<a href="https://www.youtube.com/embed/05F8MmsiLQs?rel=0&amp;wmode=transparent&amp;border=0&amp;autoplay=1&amp;iv_load_policy=3" target="_blank"><button class="btn-pop" data-video-id="ak5dFt8Ar0" style="width:20%"><i class="fa fa-youtube-play"></i></button></a>
+							</div>
+							<!--Ending Column 2 (horizontal, vertical, horizontal, vertical) -->
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Title-->	
+			<div>
+				<h1 class="movie-list-title">TV SERIES (The Witcher S01)</h1>
+			</div>
+			<!--Ending Title-->
+
+			<div>
+				<a href="assets/films/witcher/The Witcher S01.rar" download><button class="btn-tv" style="width:30%"><i class="fa fa-download"></i> Download</button></a>
+			</div>
+
+			<!-- Main Poster-->
+			<div  class="main-headinggTwo">			
+				<div class="main-header-button">
+					
+				</div>
+			</div> 
+			<!-- Ending Main Poster-->	
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery-modal-video.min.js"></script>
+
+			<script>
+				$(".btn-pop").modalVideo();
+			</script>
+		<!-- Scripts -->
+	</body>
+</html>

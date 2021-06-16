@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/register.css">
+</head>
+
+
+
+<body>
+  
+ <div class="container">
+ 	<div class="header">
+ 		<h1><b>Register</b></h1>
+ 	</div>
+ 	<div class="main">
+ 		<form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+
+      
+	
+			<span>
+ 				<i class="fas fa-user"></i>
+ 				<input  ngModel #firstname="ngModel" placeholder="FirstName (Ex: John)" name="firstName" type="text" id="firstName">
+ 			</span><br>
+
+			<span>
+ 				<i class="fas fa-user"></i>
+ 				<input  ngModel #lastName="ngModel" placeholder="LastName (Ex: Wick)" name="lastName" type="text" id="lastName">
+ 			</span><br>			
+
+ 			<span>
+ 				<i class="fas fa-user"></i>
+ 				<input  ngModel #email="ngModel" placeholder="Email (Ex: johnwick@gmail.com)" id="email" name="email" type="email">
+ 			</span><br>
+ 			<span>
+ 				<i class="fas fa-lock"></i>
+ 				<input  ngModel #password="ngModel" placeholder="Password (Ex: John@!#Wick)" name="password" type="password" id="password">
+ 			</span><a  style=" text-align:center; display:block;" href="/login">Click here to login</a><br>
+
+ 				<button type="submit" onclick="document.getElementById('firstName').value=null; document.getElementById('lastName').value=null; document.getElementById('email').value=null; document.getElementById('password').value=null;" >Submit</button>
+
+         
+
+ 		</form>
+ 	</div>
+ </div>
+</body>
+</html>
